@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        .head {
+            position: relative;
+            background-image: url(assets/img/hero.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.5)
+        }
+
+        .head::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          
+            z-index: 1; 
+            background-image:  linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.231),rgba(0, 0, 0, 0.8)); /* طبقة شفافة فاتحة */
+
+           
+        }
+     
+
+        header {
+            position: relative; 
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            flex-direction: column;
+            margin-top: 0px;
+            z-index: 2; 
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            margin: 0 50px;
+        }
+
+        nav {
+            display: flex;
+            z-index: 5;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+           
+        a:hover{
+            color: orange;
+            transition:.6s;
+        }
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        nav li {
+            list-style: none;
+            padding: 15px;
+        }
+
+        p {
+        line-height: 2.0; 
+    }
+        .logo {
+            color: white;
+            z-index: 5;
+        }
+          .logo:hover{
+            color: orange;
+            transition: 0.6s;
+          }
+        .p1 {
+            font-size: 100px;
+            color: white;
+            margin-top: -200px;
+        }
+
+        .p2 {
+            font-size: 50px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #258fe5;
+            color: white;
+            padding: 20px 50px;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+        button:hover{
+            color: orange;
+            transition: 0.7s;
+            cursor: pointer;
+        }
+
+        .work {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 140px;
+        }
+
+        .work p {
+            align-items: center;
+            align-content: center;
+          
+            text-align: center;
+        }
+           .work h1{
+
+            margin-top: 85px;
+            margin-bottom: 20px;
+           }
+        
+        .features {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 50px;
+            padding-top: 100px;
+            text-align: center;
+           
+            
+        }
+
+
+        .news{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            column-count: 3;
+            column-gap: 60px;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            margin-top: 70px;
+        }  
+        
+          
+        .services h2{
+      
+margin-bottom: 25px;
+}
+        .contact{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            padding-bottom: 80px;
+            margin-top: 35px;
+        }
+
+             .contact input{
+                  width: 500px;
+                  padding-top: 20px;
+                  padding-left: 10px;
+                  padding-bottom: 20px;
+                  border: 1px solid #cecece;
+                  margin-right: 40px;
+             }
+        .contact button{
+            display: flex;
+             background-color: #258fe5;
+             font-weight: bolder;
+             color: white;
+             margin-bottom: 25px;
+            
+
+        }
+
+        .contact button:hover{
+
+            color: orange;
+            transition: 0.7s;
+            cursor: pointer;
+        }
+           .section2{
+            background-color: #f7f7f7;
+            padding-right: 100px;
+            padding-left: 100px;
+           }
+
+
+        footer {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(69, 66, 66);
+            width: 100vw;
+            height: 20vh;
+        }
+              
+        hr {
+            border: 1px solid #258fe5;
+            width: 150px;
+            margin: 10px;
+            margin-top:50px ;
+        }
+
+        .imgsq {
+            width: 500px;
+            height: 500px;
+            margin-right: 20px;
+        }
+
+        .imgrec {
+            width: 700px;
+            height: 500px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 50px;
+        }
+          .features h1 ,.news h1{
+            margin-bottom: 30px;
+          }
+          footer span{
+            color: #8f9698;
+          }
+        @media (max-width: 768px) {
+            
+            .menu {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+             margin-top: 0;
+            padding: 30px;
+           
+        }
+
+
+
+      
+        .contact{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            padding-bottom: 80px;
+            margin-top:60px;
+            flex-direction: column;
+        }  
+
+
+        .contact input{
+            width:200px;
+          align-items: center;
+          margin-right:0px;
+
+        }
+        .p1 {
+            font-size: 70px;
+            color: white;
+             
+          
+        line-height: 1.0; 
+   
+        }
+
+        .p2 {
+            font-size: 25px;
+            color: white;
+            
+        }
+             
+            
+
+        .services {
+            display: flex;
+            column-count: 1;
+            column-gap: 60px;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            margin-top: 70px;
+        }
+
+
+        .services div{
+
+            margin-bottom: 50px;
+        }
+
+        .services div{
+
+margin-bottom: 50px;
+font-size: 20px;
+}
+
+    h1,h2{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+            .imgsq {
+                width: 100px;
+                height: 300px;
+                margin-right: 20px;
+            }
+
+            .imgrec {
+                width: 150px;
+                height: 300px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+            .images {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+                margin: 50px;
+            }
+
+            footer{
+                padding-top:100px ;
+                padding-bottom: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="menu">
+            <h1 class="logo">Website Logo</h1>
+
+            <nav>
+                <li><a href="">Home</a></li>
+                <li><a href="#pro">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Con">Contacts</a></li>
+            </nav>
+        </div>
+        <header>
+            <p class="p1">Responsive Flexbox Template</p>
+            <p class="p2">A freebie by Tutorialzine.</p>
+            <button>DOWNLOAD IT HERE</button>
+        </header>
+    </div>
+
+    <section class="work">
+        <h1>Some Of Our Work</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur numquam mollitia facere, velit eligendi qui
+            temporibus officia? Sequi nesciunt, fugit harum adipisci voluptate magni illum iusto impedit iste cupiditate
+            voluptatum</p>
+       
+        <hr>
+    </section>
+      <figure>
+    <div class="images" id="pro">
+        <img class="imgsq" src="assets/img/coast.jpg">
+        <img class="imgrec" src="assets/img/island.jpg">
+        <img class="imgrec" src="assets/img/balloon.jpg">
+        <img class="imgsq" src="assets/img/mountain.jpg">
+    </div>
+    </figure>
+                    
+
+    <section class="section2" id="about">
+    <section class="features">
+        <h1>Feature And Service</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, doloribus. Dolores illum quam facilis
+            architecto, consectetur maiores eveniet quibusdam consequuntur blanditiis perspiciatis debitis sint
+            doloribus cum magnam minima dicta vero!</p>
+        <hr>
+
+
+
+
+          <article>
+        <div class="services">
+            <div>
+                <h2>Photography</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolor iusto possimus, similique quo
+                    harum libero cum ducimus porro non voluptates molestiae repellat, voluptatem ipsum accusamus iste
+                   </p>
+            </div>
+
+            <div>
+                <h2>Web Development</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolor iusto possimus, similique quo
+                    harum libero cum ducimus porro non voluptates molestiae repellat, voluptatem ipsum accusamus iste
+                    </p>
+            </div>
+
+            <div>
+                <h2>Content Editing</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolor iusto possimus, similique quo
+                    harum libero cum ducimus porro non voluptates molestiae repellat, voluptatem ipsum accusamus iste
+                    </p>
+            </div>
+        </div>
+       </article>
+
+
+    </section>
+           
+    <section class="news">
+        <h1>Join Our Newsletter</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nesciunt provident inventore explicabo
+            aspernatur accusamus impedit numquam distinctio commodi et adipisci ea eius, repellendus consequatur fugiat
+            libero, corporis nemo magnam!</p>
+        <hr>
+    </section>
+
+    <div class="contact"  id="Con">
+          <input type="text" placeholder="Email">
+        <button>subscribe now </button>
+    </div>
+
+
+    </section>
+
+    <footer>
+        <div>Made By<span> TUTORIALIZE</span> IMAGES COURTESY TO <span>UNSPLASH</span></div>
+        <div>NO ATTEIBUTION REQUIRED. YOU CAN REMOVE THIS FOOTER.</div>
+    </footer>
+
+</body>
+
+</html>
